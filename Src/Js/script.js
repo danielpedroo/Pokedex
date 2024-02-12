@@ -5,7 +5,7 @@ const maxRecords = 151
 const limit = 10
 let offset = 0
 
-//Esta função mostra no html os pokemons, ela e movida por pastas da API, tenha isso em mente.
+//Esta função mostra no html os pokemons em lista, ela e movida por pastas da API, tenha isso em mente.
 function convertPokemonToLi(pokemon) {
   return `
   <li class="pokemon ${pokemon.type}">
@@ -26,8 +26,8 @@ function convertPokemonToLi(pokemon) {
   }
   
   function loadPokemonItens(offset, limit) {
-  //Este trecho de codigo converte o convertPokemonToLi que e o nosso metodo, que tem html
-  // a partir do pokemons.map, e adiciona isto ao nosso antigo html, (inner html);
+  //Este trecho de codigo converte o convertPokemonToLi nosso metodo que esta em html
+  //a partir do pokemons.map. e adiciona isto ao nosso antigo html via (inner html);
   pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
     const newHtml = pokemons.map(convertPokemonToLi).join('')
     pokemonsList.innerHTML += newHtml
