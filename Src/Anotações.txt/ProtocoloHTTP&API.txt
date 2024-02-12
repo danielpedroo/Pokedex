@@ -1,0 +1,44 @@
+Requisições HTTP
+            
+          https://www.google.com
+--> Url : {ip}/{path = caminho de identificação} <- endereço para o servidor, aqui contem o  caminho e porta
+--> Method : POST, GET, PUT e DELETE, sao methods onde se retorna algo ou faz alguma verificação via http
+
+Query selector
+Então, sim, a query string pode ser considerada uma forma de filtro ou seleção,
+pois permite que o cliente especifique certos critérios ou dados 
+adicionais que o servidor pode usar para processar a requisição de maneira específica. 
+
+ Request Headers
+    Sao configurações da nossa requisição.
+
+ Response Headers
+    Resposta da configuração da API
+
+body
+    corpo da requisição
+
+    Status code
+      Se refere a questao se deu ou nao certo a requisição, se foi erro do cliente ou do servidor.
+
+API
+
+Fazendo a resquisição -> Fetch retorna uma promisse = promessa de um resultado;
+Promisse é uma interface
+Processamento assincrono (fetch), vai ser executado mas a resposta nao e imediato
+o then determina a função esperada que no caso e o response -> reposta
+
+Arrow Function, e uma sintaxe reduzida de uma função
+em vez de escrever function, => seria mais apropriado
+esta função e mais usada para diminuir callback...
+
+Conversor do body, quando o body estiver em readable stream
+ e necessario uma conversão para .json para que possar ser 
+feito a manipulação de dados como se fosse um object -> reponse.json();
+ return response.json();
+
+Pode haver simplificação como neste exemplo: fetch(url).then((response) => response.json()) mas 
+ pode ser atributio a apenas um item ou metodo, que no caso e o reponse.json();
+
+//appendChild permite que seja somado mais um filho pokemon.appendChild(); aqui e trabalhado nao no formato de 
+//texto mas sim no de object.
